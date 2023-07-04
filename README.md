@@ -6,18 +6,8 @@ This Terraform module generates a private key for Transport Layer Security (TLS)
 
 ```hcl
 module "tls_private_key" {
-  source = "https://github.com/den-vasyliev/tf-hashicorp-tls-keys"
-
+  source = "https://github.com/SVestor/tf-hashicorp-tls-keys"
   algorithm   = var.algorithm
-  ecdsa_curve = var.ecdsa_curve
-}
-
-output "private_key_pem" {
-  value = module.tls_private_key.private_key_pem
-}
-
-output "public_key_openssh" {
-  value = module.tls_private_key.public_key_openssh
 }
 ```
 ## Inputs
